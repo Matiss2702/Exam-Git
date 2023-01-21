@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
         Home works !
     </div>
@@ -8,4 +8,4 @@
 export default {
     name: 'Home',
 }
-</script>
+</script> -->
