@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install -g @vue/cli 4.5.13
+    - run: npm install -g @vue/cli@4.5.13
     - run: npm run serve
     - run: npm test
