@@ -20,7 +20,7 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.9.0
+      uses: peaceiris/actions-gh-pages@v3
       with:
         GITHUB_TOKEN: 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
         BRANCH: gh-pages
