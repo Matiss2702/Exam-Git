@@ -6,22 +6,16 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Build for production
+    - name: Build
       run: npm run build
-
-    - name: Deploy to GitHub Pages
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      with:
-        GITHUB_TOKEN: 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
-        BRANCH: gh-pages
-        FOLDER: dist
+      env:
+        ACTIONS_DEPLOY_KEY: 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
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: dist
